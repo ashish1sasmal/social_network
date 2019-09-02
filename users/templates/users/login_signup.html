@@ -15,13 +15,13 @@
         <div class="login">
             <form method="POST">
                 {% csrf_token %}
-                <label for=".username">Email or phone&emsp;&emsp;&emsp;&emsp;</label>
+                <label for=".username">Email or phone&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label>
                 <label for=".password">Password</label><br>
                 <input type="text" class='username log' name="username">
                 
                 <input type="password" class='password log' name="password">
                 <input type="submit" value="Login" name="login">
-                <a href="#">&emsp;Forgot password?</a>
+                <br><small><a href="#">&emsp;Forgot password?</a></small>
             </form>
         </div>
         {% if messages %}

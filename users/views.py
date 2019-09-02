@@ -11,7 +11,7 @@ class Home(TemplateView):
 	template_name='users/home.html'
 
 def login_signup(request):
-	print('enter')
+	
 	if request.method=='POST' and 'login' in request.POST:
 		username=request.POST.get('username')
 		password=request.POST.get('password')
