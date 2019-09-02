@@ -45,7 +45,8 @@ body{
 .pages{
     grid-column: span 1;
     padding: 10px;
-    border: 1px solid black;
+    display: flex;
+    flex-direction: column;align-content: space-around;
 }
 
 .right_gap{
@@ -90,4 +91,24 @@ a{
 
 #profile p{
     grid-column: span 1;
+}
+
+.stories{
+    overflow-y: scroll;
+    border:1px solid lightgray;
+    padding: 10px;
+}
+
+.stories ul{
+    list-style-type: none;
+}
+
+.suggestions{
+    overflow-y: scroll;
+    border:1px solid lightgray;
+    padding: 10px;
+}
+
+.suggestions ul{
+    list-style-type: none;
 }
