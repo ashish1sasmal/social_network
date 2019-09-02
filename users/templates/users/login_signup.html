@@ -1,10 +1,11 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyFacebook - login or signup</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="{% static 'users/css/main.css' %}">
 </head>
 <body>
     <div class='main'>
@@ -29,7 +30,8 @@
         <div class="register">
             <h1>Create an account</h1>
             <h4>It's quick and easy.</h4>
-            <form  method="">
+            <form  method="POST">
+                {% csrf_token %}
                 <input type="text" name="first_name" placeholder="First name" class="half">
                 <input type="text" name="last_name" placeholder="Last name" class="half"><br><br>
                 <input type="email" name="email" placeholder="Email" class="full"><br><br>
