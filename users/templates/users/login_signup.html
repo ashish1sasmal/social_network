@@ -13,16 +13,24 @@
             <h1>MyFacebook</h1>
         </div>
         <div class="login">
-            <form action="">
+            <form method="POST">
+                {% csrf_token %}
                 <label for=".username">Email or phone&emsp;&emsp;&emsp;&emsp;</label>
                 <label for=".password">Password</label><br>
-                <input type="text" class='username log'>
+                <input type="text" class='username log' name="username">
                 
-                <input type="password" class='password log'>
+                <input type="password" class='password log' name="password">
                 <input type="submit" value="Login" name="login">
                 <a href="#">&emsp;Forgot password?</a>
             </form>
         </div>
+        {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-{{message.tags}}">{{message}}</div>
+                {% endfor %}
+
+              {% endif %}
+
         <div class="image">
             <h3>MyFacebook helps you connect and share with the people in your life.</h3>
             <img src="images/facebook.png" alt="world connect image">
@@ -43,6 +51,7 @@
                 <input type="radio" name="gender">Female&emsp;&emsp;
                 <input type="radio" name="gender">Custom
                 <p>By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy. <br>You may receive SMS notifications from us and can opt out at any time.</p>
+                
                 <button type="submit" id="signup" name="signup">Sign Up</button>
             </form>
             <h5>Create a Page for a celebrity, band or business.</h5>

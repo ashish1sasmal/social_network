@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 *{
     box-sizing: border-box;
     font-family: Roboto;
@@ -19,6 +21,7 @@ body{
 .logo{
     grid-area: logo;
     background: #4267b2;
+    font-family: 'Roboto', sans-serif;
     color: white;
     padding-left: 20px;
 }

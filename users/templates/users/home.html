@@ -15,9 +15,10 @@
       <h1>Home!!</h1>
       <h3><a href="{% url 'admin:index' %}">Admin</a></h3>
       {% if user.is_authenticated %}
-      <h3><a href="{% url 'login-signup' %}">Login & Signup</a></h3>
-      {% else %}
       <h3><a href="{% url 'logout' %}">Logout</a</h3>
+      
+      {% else %}
+      <h3><a href="{% url 'login-signup' %}">Login & Signup</a></h3>
       {% endif %}
     </div>
 
