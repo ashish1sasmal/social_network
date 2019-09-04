@@ -10,10 +10,12 @@ class Post(models.Model):
 	text=models.TextField()
 	image = models.ImageField(default='default.jpg', upload_to='feeds_pics')
 	date_posted=models.DateTimeField(default=timezone.now)
+	likes=models.IntegerField(null=True)
+	comment=models.IntegerField(null=True)
 	author=models.ForeignKey(User,on_delete=models.CASCADE)
 
 	def __str__(self):
-		return self.author.username
+		return self.author.username+" "+str(self.id)
 
 	def save(self):
 		super().save()
