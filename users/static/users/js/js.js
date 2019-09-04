@@ -11,6 +11,30 @@ sign_up.onclick=function(e){
         e.preventDefault();
     }
 
+    if(/[^a-z|A-Z]/.test(f_name.value)){
+        f_name.focus();
+        f_name.style.border='1px solid red';
+        e.preventDefault();
+        f_name.value='';
+        f_name.placeholder="only letters allowed";
+    }
+
+    if(/[^a-z|A-Z]/.test(l_name.value)){
+        l_name.focus();
+        l_name.style.border='1px solid red';
+        e.preventDefault();
+        l_name.value='';
+        l_name.placeholder="only letters allowed";
+    }
+
+    if(/\w+@[a-z]\.[a-z]/.test(email.value)===false){
+        email.focus();
+        email.style.border='1px solid red';
+        e.preventDefault();
+        email.value='';
+        email.placeholder="wrong email id";
+    }
+
     if (l_name.value==''){
         l_name.focus();
         l_name.style.border='1px solid red';
