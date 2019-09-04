@@ -37,6 +37,7 @@ body{
     grid-area: image;
     background-image: linear-gradient(to bottom,white,#b7bfec);
     padding: 10px;
+    padding-left: 3em;
 }
 
 .register{

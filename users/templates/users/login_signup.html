@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyFacebook - login or signup</title>
     <link rel="stylesheet" href="{% static 'users/css/main.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
     <div class='main'>
@@ -15,12 +16,12 @@
         <div class="login">
             <form method="POST">
                 {% csrf_token %}
-                <label for=".username">Email or phone&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label>
+                <label for=".username">Email or phone&emsp;&emsp;&emsp;&emsp;</label>
                 <label for=".password">Password</label><br>
-                <input type="text" class='username log' name="username">
+                <input type="text" class='username log' name="username" id="username">
                 
-                <input type="password" class='password log' name="password">
-                <input type="submit" value="Login" name="login">
+                <input type="password" class='password log' name="password" id="log_pwd">
+                <input type="submit" value="Login" name="login" id="login">
                 <br><small><a href="#">&emsp;Forgot password?</a></small>
             </form>
         </div>
@@ -40,14 +41,14 @@
             <h4>It's quick and easy.</h4>
             <form  method="POST">
                 {% csrf_token %}
-                <input type="text" name="first_name" placeholder="First name" class="half">
-                <input type="text" name="last_name" placeholder="Last name" class="half"><br><br>
-                <input type="email" name="email" placeholder="Email" class="full"><br><br>
-                <input type="password" name="password" placeholder="New password" class="full"><br>
+                <input type="text" name="first_name" placeholder="First name" class="half" id="f_name">
+                <input type="text" name="last_name" placeholder="Last name" class="half" id="l_name"><br><br>
+                <input type="email" name="email" placeholder="Email" class="full" id="email"><br><br>
+                <input type="password" name="password" placeholder="New password" class="full" id="pass"><br>
                 <p>Birthday</p>
-                <input type="date" name="DOB" class="half">
+                <input type="date" name="DOB" class="half">&emsp;<i class="material-icons" title="Your age should be greater than 18.">help</i>
                 <p>Gender</p>
-                <input type="radio" name="gender">Male&emsp;&emsp;
+                <input type="radio" name="gender" checked>Male&emsp;&emsp;
                 <input type="radio" name="gender">Female&emsp;&emsp;
                 <input type="radio" name="gender">Custom
                 <p>By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy. <br>You may receive SMS notifications from us and can opt out at any time.</p>
@@ -62,6 +63,6 @@
     </div>
 
 
-    <script src="scripts/login.js"></script>
+    <script src="{% static 'users/js/js.js' %}"></script>
 </body>
 </html>
