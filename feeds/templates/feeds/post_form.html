@@ -1,3 +1,5 @@
+{% load crispy_forms_tags %}
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,20 +10,17 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Home!</title>
+    <title>Create Post</title>
   </head>
   <body>
     <div class="jumbotron">
-      <h1>Home!!</h1>
-      <h3><a href="{% url 'admin:index' %}">Admin</a></h3>
-      {% if user.is_authenticated %}
-      <h3><a href="{% url 'create' %}">Post++</a</h3>
-      <h3><a href="{% url 'logout' %}">Logout</a</h3>
-      <h3><a href="{% url 'feeds' %}">Feeds</a</h3>
+      <h1>CReate POst TOday!</h1>
+      <form method='POST' enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" name="" value="Submit" class="btn btn-outline-info">
+      </form>
       
-      {% else %}
-      <h3><a href="{% url 'login-signup' %}">Login & Signup</a></h3>
-      {% endif %}
     </div>
 
     <!-- Optional JavaScript -->
