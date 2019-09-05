@@ -9,15 +9,15 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
-<body>
-    <div class="main">
+    <body>
+    
         <div class="header">
             <div>
-            <a href="{% url 'home' %}"><img src="https://image.flaticon.com/icons/png/512/33/33702.png" alt="facebook logo" class="logo"></a>
+            <a href="{% url 'home' %}"><img src="https://image.flaticon.com/icons/png/512/33/33702.png" alt="facebook logo"></a>
             <span>&emsp;|&emsp; MyFacebook</span>
             </div>
             <div>
-            <form action="" class="search" id="search">
+            <form action="" id="search">
                 <input type="text" name="search" placeholder="Search">
             </form>
             </div>
@@ -28,6 +28,7 @@
             <a href="{% url 'logout' %}"><span>Log Out</span></a>
             </div>
         </div>
+        <div class="main">
         <div class="left_gap"></div>
         <div class="content">
             
