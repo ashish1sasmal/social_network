@@ -27,7 +27,7 @@ sign_up.onclick=function(e){
         l_name.placeholder="only letters allowed";
     }
 
-    if(/\w+@[a-z]\.[a-z]/.test(email.value)===false){
+    if(/\w+@[a-z]+\.[a-z]+/.test(email.value)===false){
         email.focus();
         email.style.border='1px solid red';
         e.preventDefault();

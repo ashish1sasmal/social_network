@@ -11,25 +11,27 @@ body{
     grid-template-columns: 15% 50% 20% 15%;
     grid-row-gap: 1em;
     grid-column-gap: 2em;
+    background:#fafafa;
+    
 }
 
 .header{
-    grid-column: span 4;
-    background:#4267b2;
-    padding: 10px 10%;
-    display:flex;
-    flex-direction: row;
+    display: flex;
     justify-content: space-around;
+    background: #4267b2;
+    padding: 10px;
+    color:white;
+    font-size: 25px;
+}
+
+.header img{
+    width:23px;
 }
 
 .header a{
-    padding-left: 20px;
+    padding-left:15px;
     color:white;
-}
-
-.header h1{
-    display: inline;
-    color:white;
+    text-decoration: none;
 }
 
 .left_gap{
@@ -39,7 +41,7 @@ body{
 .content{
     grid-column: span 1;
     padding: 10px;
-    border: 1px solid black;
+
 }
 
 .pages{
@@ -47,11 +49,13 @@ body{
     padding: 10px;
     display: flex;
     flex-direction: column;align-content: space-around;
+
 }
 
 .right_gap{
     grid-column: span 1;
     padding: 10px;
+    
 }
 
 .logo{
@@ -71,8 +75,18 @@ a{
     padding: 5px;
 }
 
+#post_img img{
+    width:100%;
+    padding: 10px 0;
+    max-height: 60vh;
+}
+
 .post{
     width:100%;
+    margin:10px 0;
+    border:1px solid lightgray;
+    background: white;
+    padding: 10px;
 }
 
 #comment{
