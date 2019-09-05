@@ -1,2 +1,4 @@
 *.sqlite3
 .pyc
+
+dir_to_ignore/media
