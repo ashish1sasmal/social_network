@@ -17,7 +17,7 @@ class PostCreateView(LoginRequiredMixin,CreateView):
 		form.instance.author=self.request.user    #saving user before creating post i.e., we are overriding it
 		return super().form_valid(form)
 
-class FeedsView(ListView):
+class PostView(ListView):
 	template_name='feeds/feeds.html'
 	context_object_name='posts'
 	model=Post

@@ -1,4 +1,4 @@
-<!-- {% load staticfiles %}
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,12 +31,13 @@
         <div class="left_gap"></div>
         <div class="content">
             
-            <div class="post">
+            
                 {% for post in posts %}
+                <div class="post">
                 <div class="post_header">
                     <img src="" alt="user profile pic">
-                    <span> post.author.first_name </span>
-                    <span>post.date_posted</span>
+                    <span> {{post.author.first_name}} </span>
+                    <span>{{post.date_posted}}</span>
                     <a href=""> Follow </a>
                 </div>
                 <div>
@@ -55,8 +56,9 @@
                         <input type="text" name="comment" placeholder="Add a comment..." id="comment"> 
                     </form>
                 </div>
-                {% endfor %}
             </div>
+                {% endfor %}
+            
 
 
         </div>
@@ -99,29 +101,5 @@
     <script src="{% static 'feeds/js/feeds.js' %}"></script>
 </body>
 </html>
- -->
 
 
- <!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <title>Home!</title>
-  </head>
-  <body>
-    <div class="jumbotron">
-        {% for post in posts %}
-        <h3>{{ post.author.first_name }}</h3>
-        <small>{{ post.date_posted }}</small>
-        <p>{{ post.text }}</p>
-        <img src="{{ post.image.url }}">
-        {% endfor %}
-    </div>
-    </body>
-</html>
