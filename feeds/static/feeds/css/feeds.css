@@ -16,13 +16,12 @@ body{
 }
 
 .header{
-    grid-column: span 4;
     display:flex;
     justify-content: space-evenly;
     background: #4267b2;
-    padding: 15px 0;
+    padding: 13px 0;
     color:white;
-    font-size: 25px;
+    font-size: 24px;
 }
 
 .header img{
@@ -36,7 +35,10 @@ body{
 }
 
 #search input{
-    width:70%;
+    width:100%;
+    color:black;
+    font-size:15px;
+    padding: 6px;
 }
 
 .left_gap{
