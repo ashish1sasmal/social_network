@@ -32,15 +32,15 @@
         <div class="content">
             
             
-                {% for post in posts %}
-                <div class="post">
+            {% for post in posts %}
+            <div class="post">
                 <div class="post_header">
                     <img src="" alt="user profile pic">
                     <span> {{post.author.first_name}} </span>
                     <span>{{post.date_posted}}</span>
                     <a href=""> Follow </a>
                 </div>
-                <div>
+                <div id="post_img">
                     <img src="{{post.image.url}}" alt="post pic">
                 </div>
                 <div>
