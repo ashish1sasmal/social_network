@@ -10,6 +10,8 @@ from django.contrib.auth import authenticate
 class Home(TemplateView):
 	template_name='users/home.html'
 
+
+
 def login_signup(request):
 	
 	if request.method=='POST' and 'login' in request.POST:
@@ -26,8 +28,8 @@ def login_signup(request):
 
 
 
-
 	elif request.method=='POST' and 'signup' in request.POST:
+		print('enter')
 		first_name=request.POST.get('first_name')
 		last_name=request.POST.get('last_name')
 		email=request.POST.get('email')
@@ -36,13 +38,10 @@ def login_signup(request):
 		gender=request.POST.get('gender')
 		user=User(username=email,first_name=first_name,last_name=last_name,email=email,password=password)
 		profile=Profile(dob=dob,gender=gender)
-
+		user.set_password(user.password)
 		user.save()
 		profile.save()
 
 		return redirect('home')
 
 	return render(request,'users/login_signup.html')
-
-
-					
