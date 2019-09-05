@@ -16,22 +16,22 @@ body{
 }
 
 .header{
-    grid-column: span 4;
-    background:#4267b2;
-    padding: 10px 10%;
-    display:flex;
-    flex-direction: row;
+    display: flex;
     justify-content: space-around;
+    background: #4267b2;
+    padding: 10px;
+    color:white;
+    font-size: 25px;
+}
+
+.header img{
+    width:23px;
 }
 
 .header a{
-    padding-left: 20px;
+    padding-left:15px;
     color:white;
-}
-
-.header h1{
-    display: inline;
-    color:white;
+    text-decoration: none;
 }
 
 .left_gap{
