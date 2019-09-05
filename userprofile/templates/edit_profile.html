@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile - MyFacebook</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+    <body>
+        <div class="header">
+                <div>
+                <a href="{% url 'home' %}"><img src="https://image.flaticon.com/icons/png/512/33/33702.png" alt="facebook logo" class="logo"></a>
+                <span>&emsp;|&emsp; MyFacebook</span>
+                </div>
+                <div>
+                <form action="" id="search">
+                    <input type="text" name="search" placeholder="Search">
+                </form>
+                </div>
+                <div>
+                <a href=""><i class="material-icons">explore</i></a>
+                <a href=""><i class="material-icons">notifications</i></a>
+                <a href=""><i class="material-icons">person</i></a>
+                <a href="{% url 'logout' %}"><span>Log Out</span></a>
+                </div>
+            </div>
+    <div class="main">
+        <div class="left_gap"></div>
+        <div class="select">
+            <h3 id="clicked">Edit Profile</h3>
+            <h3 id="click">Change Password</h3>
+        </div>
+        <form class="profile_form">
+            <img src="" alt="profile pic" id="pic">
+            <input type="file" name="profile_pic" id="profile_pic">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" value="">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" value="">
+            <label for="website">Website</label>
+            <input type="text" name="website" id="website" value="">
+            <label for="bio">Bio</label>
+            <textarea name="bio" id="bio" value=""></textarea>       
+            <label for=""></label> 
+            <p>Private Information</p>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" value="">
+            <label for="phone">Phone Number</label>
+            <input type="number" name="phone" id="phone" value="">
+            <label for="gender">Gender</label>
+            <input type="text" name="gender" id="gender" value="">
+            <label for=""></label>
+            <button type="submit">Save</button>
+            <label for=""></label>
+            <a href="">Delete my account</a>
+        </form>
+        <div class="right_gap"></div>
+    </div>
+    <div class="footer">
+        <p>About us &emsp; Support &emsp; Press &emsp; API &emsp; Jobs &emsp; Privacy &emsp; Terms &emsp; Directory &emsp; Profiles &emsp; Hashtags &emsp; Language</p>
+    </div>
+</body>
+</html>

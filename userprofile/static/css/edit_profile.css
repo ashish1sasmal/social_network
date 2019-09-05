@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 15% 15% 55% 15%;
+    padding-top:130px;
+    background:#fafafa;
+}
+
+.header{
+    position: fixed;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: space-evenly;
+    background: #4267b2;
+    padding: 15px 0;
+    color:white;
+    font-size: 25px;
+    width:100%;
+}
+
+.header img{
+    width:23px;
+}
+
+.header a{
+    padding-left:15px;
+    color:white;
+    text-decoration: none;
+}
+
+#search input{
+    width:100%;
+}
+
+.profile_form{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    background: white;
+    border: 1px solid lightgray;
+    padding: 20px;
+}
+
+.select{
+    background: white;
+    border: 1px solid lightgray;
+    border-right:0;
+    
+}
+
+.select h3{
+    font-weight: normal;
+    padding: 5px;
+    padding-left: 20px;
+}
+
+label{
+    grid-column: span 1;
+    display: flex;
+    justify-content: flex-end;
+    padding:15px;
+    font-weight: bold;
+}
+
+.profile_form input{
+    grid-column: span 1;
+    padding: 6px;
+    margin:9px 0;
+    width:70%;
+    border:1px solid lightgray;
+}
+
+.profile_form button{
+    background: #4267b2;
+    border-radius: 2px;
+    border :1px solid #4267b2;
+    width:30%;
+    color:white;
+}
+
+.profile_form img{
+    width:30px;
+}
+
+#profile_pic{
+    border:0;
+}
+
+#bio{
+    width:70%;
+    border:1px solid lightgray;
+    padding: 10px;
+    margin-top:10px;
+}
+
+.profile_form a{
+    padding:20px;
+    text-decoration: none;
+}
+
+#pic{
+    display: flex;
+    justify-content:flex-end;
+}
+
+.footer{
+    margin:0 15%;
+    padding:20px;
+}
