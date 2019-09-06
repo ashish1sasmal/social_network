@@ -4,3 +4,4 @@ Pillow==6.1.0
 django-crispy-forms==1.7.2
 argon2-cffi==19.1.0
 bcrypt==3.1.7
+django-ckeditor==5.6.1
