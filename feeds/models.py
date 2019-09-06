@@ -4,11 +4,13 @@ from django.utils import timezone
 from django.urls import reverse
 from PIL import Image
 
+from ckeditor.fields import RichTextField
+
 # Create your models here.
 
 class Post(models.Model):
-	text=models.TextField()
-	image = models.ImageField(default='default.jpg', upload_to='feeds_pics')
+	text=RichTextField()
+	image = models.ImageField(null=True,blank=True, upload_to='feeds_pics')
 	date_posted=models.DateTimeField(default=timezone.now)
 	likes=models.IntegerField(null=True)
 	comment=models.IntegerField(null=True)

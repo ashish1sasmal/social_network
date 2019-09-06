@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'feeds',
     'userprofile',
     'crispy_forms',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +136,4 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL='home'
 LOGIN_URL='login-signup'
 LOGOUT_REDIRECT_URL='login_signup'
+
