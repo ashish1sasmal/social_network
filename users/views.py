@@ -36,10 +36,13 @@ def login_signup(request):
 		password=request.POST.get('password')
 		dob=request.POST.get('DOB')
 		gender=request.POST.get('gender')
+
 		user=User(username=email,first_name=first_name,last_name=last_name,email=email,password=password)
-		profile=Profile(dob=dob,gender=gender)
 		user.set_password(user.password)
 		user.save()
+		profile=Profile(dob=dob,gender=gender)
+		
+		profile.user=user
 		profile.save()
 
 		return redirect('home')

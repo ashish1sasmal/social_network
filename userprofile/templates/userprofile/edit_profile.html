@@ -1,10 +1,11 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Profile - MyFacebook</title>
-    <link rel="stylesheet" href="../static/css/edit_profile.css">
+    <link rel="stylesheet" href="{% static 'userprofile/css/edit_profile.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
     <body>
@@ -34,10 +35,13 @@
         <form class="profile_form">
             <img src="" alt="profile pic" id="pic">
             <input type="file" name="profile_pic" id="profile_pic">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" value="">
+            <label for="fname">Name</label>
+            <input type="text" id="name" name="fname" value="{{ user.first_name }}">
+
+            <label for="lname">Name</label>
+            <input type="text" id="name" name="lname" value="{{ user.last_name }}">
             <label for="username">Username</label>
-            <input type="text" name="username" id="username" value="">
+            <input type="text" name="username" id="username" value="{{ user.username }}">
             <label for="website">Website</label>
             <input type="text" name="website" id="website" value="">
             <label for="bio">Bio</label>
@@ -45,11 +49,10 @@
             <label for=""></label> 
             <p>Private Information</p>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" value="">
+            <input type="email" name="email" id="email" value="{{ user.email }}">
             <label for="phone">Phone Number</label>
             <input type="number" name="phone" id="phone" value="">
-            <label for="gender">Gender</label>
-            <input type="text" name="gender" id="gender" value="">
+            
             <label for=""></label>
             <button type="submit">Save</button>
             <label for=""></label>
