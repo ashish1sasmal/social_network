@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+}
+
+.header{
+    position: fixed;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: space-evenly;
+    background: #4267b2;
+    padding: 13px 0;
+    color:white;
+    font-size: 24px;
+    width:100%;
+}
+
+.header img{
+    width:23px;
+}
+
+.header a{
+    padding-left:15px;
+    color:white;
+    text-decoration: none;
+}
+
+#search input{
+    width:100%;
+    color:black;
+    font-size:15px;
+    padding: 6px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    padding-top: 120px;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 20% 50%;
+}

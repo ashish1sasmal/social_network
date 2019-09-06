@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/userprofile/css/profile.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>MyFacebook Profile</title>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <a href="{% url 'home' %}"><img src="https://image.flaticon.com/icons/png/512/33/33702.png" alt="facebook logo" class="logo"></a>
+            <span>&emsp;|&emsp; MyFacebook</span>
+        </div>
+        <div>
+            <form action="" id="search">
+                <input type="text" name="search" placeholder="Search">
+            </form>
+        </div>
+        <div>
+            <a href=""><i class="material-icons">explore</i></a>
+            <a href=""><i class="material-icons">notifications</i></a>
+            <a href=""><i class="material-icons">person</i></a>
+            <a href="{% url 'logout' %}"><span>Log Out</span></a>
+        </div>
+    </div>
+    <main>
+        <div class="left_gap"></div>
+        <div class="content">
+            <img src="" alt="profile pic">
+            <div>
+                <div>
+                    {{ profile name }}&emsp;
+                    <button>{{ follow or following }}</button>
+                </div>
+                <div>
+                    {{no of posts}} posts &emsp; {{no of followers}} followers {{following}} following
+                </div>
+                <div>
+                    {{ bio }}<br>
+                    {{website}}
+                </div>
+            </div>
+            <hr><br>
+            {{loop}}
+            <img src="" alt="post pic">
+        </div>
+        <div class="right_gap"></div>    
+    </main>
+</body>
+</html>
