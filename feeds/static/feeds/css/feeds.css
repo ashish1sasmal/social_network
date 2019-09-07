@@ -50,54 +50,36 @@ body{
     grid-column: span 1;
 }
 
-.create_post{
-    background: white;
-    border:1px solid lightgray;
-}
-
-.create_post div{
-    padding: 10px;
-}
-
-.create_post input{
-    padding: 10px;
-    border: none;
-}
-
-#post_head{
-    background: rgb(245, 243, 243);
-}
-
-.create_post button{
-    background: rgb(245, 243, 243);
-    border:1px solid rgb(245, 243, 243);
-    border-radius: 10px;
-    padding:7px;
-    margin-right:10px;
-}
-
 i{
     vertical-align: middle;
 }
 
-#feed_story{
-    background: rgb(245, 243, 243);
-    padding:10px;
+.create_post{
+    border: 1px solid lightgray;
+    background: white;
+    padding: 10px;
 }
 
-#feeling{
-    display: none;
+#post_text{
+    width:80%;
+    height:8vh;
+    padding: 5px;
 }
 
-#photo{
-    opacity: 0;
+.post_head{
+    font-weight: bold;
+    font-size: 16px;
+    background: #f1f3fa;
+    padding: 10px;
+    border:1px solid lightgray;
 }
 
-#feed_post{
+#post{
     width:95%;
-    margin:0 5px;
     background: #4267b2;
+    border: 1px solid #4267b2;
     color:white;
+    padding: 10px;
 }
 
 .content{

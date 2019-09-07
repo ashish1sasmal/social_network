@@ -31,28 +31,24 @@
         <div class="main">
         <div class="left_gap"></div>
         <div class="content">
+            <div>
+            <div class="post_head">Create Post</div>
             <form action="" class="create_post">
-                <div id="post_head">Create Post</div>
-                <div>
-                <img src="" alt="profile image">
-                <input type="text" placeholder="What's on your mind ?" name="post_text">
-                <hr>
-                <div id="feeling">
-                <select name="" ></select>
-                <hr>
-                </div>
-                <button>Photo/Video</button>
-                <input type="file" id="photo">
-                <button id="feel_button"><i class="material-icons">tag_faces</i>&emsp;Feeling/Activity</button>
-                </div>
-                <div id="feed_story">
-                    <input type="radio" value="story"><i class="material-icons"></i>&nbsp;Your Story&emsp;<br><br>
-                    <input type="radio" value="feed" checked><i class="material-icons">&nbsp;assignment</i> News Feed<br><br>
-                    <input type="submit" value="Post" id="feed_post">
-                </div>
                 
+                <img src="" alt="profile pic">
+                <input type="text" name="post_text" id="post_text">
+                <hr>
+                <input type="file" name="photo">
+                <hr>
+                <input type="radio" id="news_feed" name="choice" value="news_feed" checked>
+                <label for="news_feed">News Feed</label>
+                <input type="radio" id="story" name="choice" value="story">
+                <label for="story">Story</label>
+                
+                <hr>
+                <input type="submit" value="Post" id="post">
             </form>
-            
+            </div>
             {% for post in posts %}
             <div class="post">
                 <div class="post_header">
@@ -95,7 +91,7 @@
             </div>
             <div class="stories">
                 <h3>Stories</h3>
-                <ul>
+                <u8l>
 
                     <li>
                         <img src="" alt="user profile pic"> user name 
