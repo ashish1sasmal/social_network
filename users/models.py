@@ -9,12 +9,12 @@ class Profile(models.Model):
 	phone=models.CharField(max_length=10)
 	dob=models.DateField()
 	gender=models.CharField(max_length=10)
-	image = models.ImageField(default='default.jpg', upload_to='profile_pics')
+	# image = models.ImageField(blank=True,null=True, upload_to='profile_pics')
 
 
 	def __str__(self):
 		return self.user.username
 
-	def save(self):
-		super().save()
-		img=Image.open(self.image.path)
+	# def save(self):
+	# 	super().save()
+	# 	img=Image.open(self.image.path)
