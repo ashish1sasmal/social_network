@@ -12,6 +12,7 @@ body{
     grid-row-gap: 1em;
     grid-column-gap: 2em;
     background:#fafafa;
+    padding-top:90px;
     
 }
 
@@ -22,6 +23,10 @@ body{
     padding: 13px 0;
     color:white;
     font-size: 24px;
+    position: fixed;
+    top:0;
+    width:100%;
+    z-index: 1;
 }
 
 .header img{
@@ -55,8 +60,11 @@ body{
     grid-column: span 1;
     padding: 10px;
     display: flex;
-    flex-direction: column;align-content: space-around;
-
+    flex-direction: column;
+    align-content: space-around;
+    position: sticky;
+    top:90px;
+    height:80vh;
 }
 
 .right_gap{
