@@ -6,3 +6,9 @@ search.input.addEventListener("keyup", function(event) {
     document.search.submit();
   }
 });
+
+let feel_button=document.getElementById("feel_button");
+let feeling=document.getElementById("feeling");
+feel_button.onclick=function(){
+  feeling.style.display='block';
+}

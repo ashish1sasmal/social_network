@@ -11,7 +11,7 @@ body{
     grid-template-columns: 15% 50% 20% 15%;
     grid-row-gap: 1em;
     grid-column-gap: 2em;
-    background:#fafafa;
+    background:#ecedf0;
     padding-top:90px;
     
 }
@@ -48,6 +48,56 @@ body{
 
 .left_gap{
     grid-column: span 1;
+}
+
+.create_post{
+    background: white;
+    border:1px solid lightgray;
+}
+
+.create_post div{
+    padding: 10px;
+}
+
+.create_post input{
+    padding: 10px;
+    border: none;
+}
+
+#post_head{
+    background: rgb(245, 243, 243);
+}
+
+.create_post button{
+    background: rgb(245, 243, 243);
+    border:1px solid rgb(245, 243, 243);
+    border-radius: 10px;
+    padding:7px;
+    margin-right:10px;
+}
+
+i{
+    vertical-align: middle;
+}
+
+#feed_story{
+    background: rgb(245, 243, 243);
+    padding:10px;
+}
+
+#feeling{
+    display: none;
+}
+
+#photo{
+    opacity: 0;
+}
+
+#feed_post{
+    width:95%;
+    margin:0 5px;
+    background: #4267b2;
+    color:white;
 }
 
 .content{
