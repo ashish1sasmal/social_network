@@ -1,9 +1,11 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/userprofile/css/profile.css">
+    <link rel="stylesheet" href="{% static 'userprofile/css/edit_profile.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>MyFacebook Profile</title>
 </head>
@@ -31,19 +33,19 @@
             <img src="" alt="profile pic">
             <div>
                 <div>
-                    {{ profile name }}&emsp;
-                    <button>{{ follow or following }}</button>
+                     {{user.email}} &emsp;
+                    <button> follow or following </button>
                 </div>
                 <div>
-                    {{no of posts}} posts &emsp; {{no of followers}} followers {{following}} following
+                   <!--  no of posts --> posts &emsp; <!-- no of followers --> followers <!-- following --> following
                 </div>
                 <div>
-                    {{ bio }}<br>
-                    {{website}}
+                    <!--  bio  --><br>
+                    <!-- website -->
                 </div>
             </div>
             <div class="stories">
-                <button><img src="C:\Users\Sanjay Majhi\Desktop\as.jpg" alt="story first image"></button>
+                <button><img src="" alt="story first image"></button>
             </div>
             <div class="posts">
                 
