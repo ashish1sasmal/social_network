@@ -33,6 +33,7 @@
             <h3 id="click">Change Password</h3>
         </div>
         <form class="profile_form" enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
             <img src="{{ profile.image.url }}" alt="profile pic" id="pic">
             <input type="file" name="profile_pic" id="profile_pic">
             <label for="fname">Name</label>
