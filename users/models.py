@@ -5,10 +5,11 @@ from django.contrib.auth.models import User
 
 class Profile(models.Model):
 	user=models.OneToOneField(User,on_delete=models.CASCADE)
-	webiste=models.URLField(null=True)
+	website=models.URLField(null=True)
 	phone=models.CharField(max_length=10)
 	dob=models.DateField()
 	gender=models.CharField(max_length=10)
+	bio=models.CharField(max_length=50)
 	# image = models.ImageField(blank=True,null=True, upload_to='profile_pics')
 
 

@@ -33,25 +33,25 @@
             <h3 id="click">Change Password</h3>
         </div>
         <form class="profile_form" enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
             <img src="{{ profile.image.url }}" alt="profile pic" id="pic">
             <input type="file" name="profile_pic" id="profile_pic">
-            <label for="fname">Name</label>
+            <label for="fname">First Name</label>
             <input type="text" id="name" name="fname" value="{{ user.first_name }}">
 
-            <label for="lname">Name</label>
+            <label for="lname">Last Name</label>
             <input type="text" id="name" name="lname" value="{{ user.last_name }}">
-            <label for="username">Username</label>
-            <input type="text" name="username" id="username" value="{{ user.username }}">
+            
             <label for="website">Website</label>
             <input type="text" name="website" id="website" value="{{ profile.website }}">
             <label for="bio">Bio</label>
-            <textarea name="bio" id="bio" value=""></textarea>       
+            <textarea name="bio" id="bio" >{{ profile.bio }}</textarea>       
             <label for=""></label> 
             <p>Private Information</p>
             <label for="email">Email</label>
             <input type="email" name="email" id="email" value="{{ user.email }}">
             <label for="phone">Phone Number</label>
-            <input type="number" name="phone" id="phone" value="">
+            <input type="number" name="phone" id="phone" value="{{ profile.phone }}">
             
             <label for=""></label>
             <button type="submit">Save</button>
