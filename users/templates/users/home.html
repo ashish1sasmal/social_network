@@ -15,7 +15,6 @@
       <h1>Home!!</h1>
       <h3><a href="{% url 'admin:index' %}">Admin</a></h3>
       {% if user.is_authenticated %}
-      <h3><a href="{% url 'create' %}">Post++</a</h3>
       <h3><a href="{% url 'logout' %}">Logout</a</h3>
       <h3><a href="{% url 'feeds' %}">Feeds</a</h3>
       <h3><a href="{% url 'profile' %}">Profile</a></h3>
