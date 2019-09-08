@@ -10,12 +10,12 @@ class Profile(models.Model):
 	dob=models.DateField()
 	gender=models.CharField(max_length=10)
 	bio=models.CharField(max_length=50)
-	# image = models.ImageField(blank=True,null=True, upload_to='profile_pics')
+	image = models.ImageField(default='default.jpg', upload_to='profile_pics')
 
 
 	def __str__(self):
 		return self.user.username
 
-	# def save(self):
-	# 	super().save()
-	# 	img=Image.open(self.image.path)
+	def save(self):
+		super().save()
+		img=Image.open(self.image.path)
