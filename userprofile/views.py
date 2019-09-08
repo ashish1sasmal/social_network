@@ -30,6 +30,8 @@ def edit_profile(request):
 		profile.website=website
 		profile.bio=bio
 		profile.phone=phone
+		if 'profile_pic' in request.FILES:
+			profile.image=request.FILES['profile_pic']
 		profile.save()
 
 #########################################3
